@@ -40,6 +40,9 @@ group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'devise'
+  gem 'mailjet'
+  gem 'dotenv-rails'
+  gem 'dotenv'
 end
 
 group :development do
@@ -51,6 +54,9 @@ group :development do
   gem 'spring-watcher-listen', '~> 2.0.0'
   gem 'devise'
   gem 'faker'
+  gem 'mailjet'
+  gem 'dotenv-rails'
+  gem 'dotenv'
 end
 
 group :test do
