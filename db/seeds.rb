@@ -24,11 +24,13 @@ imgs = [
 ]
 items = []
 20.times do
+    name = Faker::FunnyName.name
     items << Item.create(
-        title: Faker::FunnyName.name,
+        title: name,
         short_description: Faker::Lorem.sentence,
         long_description: Faker::Lorem.sentence,
         price: range(10.0, 50.0),
+        slug: name.downcase.gsub(' ', '-').gsub('_', '-').gsub('.', ''),
         image_url: imgs[rand(0..imgs.size)]
         )
 end
