@@ -1,4 +1,6 @@
 class Item < ApplicationRecord
     has_and_belongs_to_many :orders
-    has_and_belongs_to_many :carts
+    has_many :carts_items
+    has_and_belongs_to_many :carts, through: :carts_items
+    accepts_nested_attributes_for :carts_items
 end

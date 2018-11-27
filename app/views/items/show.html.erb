@@ -1,6 +1,11 @@
 <div>
-  <a href="/carts/add_item/<%= @item.id %>" data-remote=true> Add to Cart </a>
   <div>
+    <form action="/carts/add_to_cart" method="post" data-remote="true">
+      <input name="authenticity_token" value="<%= form_authenticity_token %>" type="hidden">
+      <input type="hidden" id="item-id" name="add_item[item_id]" value="<%= @item.id %>" />
+      <input type="text" name="add_item[quantity]" value="0" />
+      <input type="submit" />
+    </form>
     <%= @item.title %>
     <%= @item.short_description %>
     <%= @item.price %>
