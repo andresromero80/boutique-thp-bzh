@@ -1,0 +1,11 @@
+<div class="container">
+    <% if @items %>
+        <% @items.each do |item| %>
+            <div class="item">
+                <%= item.title %> <br>
+                <img src="<%= item.image_url %>" />
+                <%= link_to "Details ", item_path(item) %>
+            </div>
+        <% end %>!
+    <% end %>
+</div>
