@@ -1,7 +1,8 @@
 class CartsController < ApplicationController
-
+  before_action :is_signed_in?
   def show
     @cart_items = @cart.items
+    @total = @cart.compute_total
   end
 
   def add_item
@@ -15,11 +16,18 @@ class CartsController < ApplicationController
   def remove_item
     item = Item.find(params['id'])
     @cart.items.delete(item)
+    @total = @cart.compute_total
+    @id = item.id
 
-    redirect_to cart_path
+    respond_to do |format|
+      format.html
+      format.js
+     end
   end
 
-  def item_id
-    params[:id].to_i
+  def is_signed_in?
+    if !user_signed_in?
+       redirect_to new_user_session_path
+    end
   end
 end

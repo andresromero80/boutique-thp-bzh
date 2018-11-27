@@ -12,6 +12,11 @@ class ApplicationController < ActionController::Base
 		def set_cart
 			if current_user
 				@cart = Cart.find_by(user_id: current_user.id)
+				unless @cart
+					@cart = Cart.create
+					current_user.cart = @cart
+					@cart = Cart.find_by(user_id: current_user.id)
+				end
 			end
 		end
 end
