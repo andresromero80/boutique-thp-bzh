@@ -1,0 +1,12 @@
+<% if @cart_items %>
+  <div>
+    <% @cart_items.each do |item| %>
+      <div>
+        <%= item.title %>
+        <%= item.short_description %>
+        <%= item.price %>
+        <a href="/carts/remove_item/<%= item.id %>" data-remote=true> Remove from Cart </a>
+      </div>
+    <% end %>
+  </div>
+<% end %>

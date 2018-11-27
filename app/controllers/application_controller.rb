@@ -10,7 +10,8 @@ class ApplicationController < ActionController::Base
 		end
 
 		def set_cart
-			session[:cart] ||= []
-			@cart = Set.new(session[:cart])
+			if current_user
+				@cart = Cart.find_by(user_id: current_user.id)
+			end
 		end
 end
