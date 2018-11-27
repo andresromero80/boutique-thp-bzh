@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 			if current_user
 				@cart = Cart.find_by(user_id: current_user.id)
 				unless @cart
-					@cart = Cart.create
+					@cart = Cart.create(user_id: current_user.id, slug: 'mon-panier')
 					current_user.cart = @cart
 					@cart = Cart.find_by(user_id: current_user.id)
 				end

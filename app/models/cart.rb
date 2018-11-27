@@ -13,4 +13,8 @@ class Cart < ApplicationRecord
     
     return price
   end
+
+  def to_param
+    slug
+  end
 end
