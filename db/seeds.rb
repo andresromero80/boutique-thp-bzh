@@ -22,7 +22,13 @@ imgs = [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHKCeJuY1_6XqTOnS9ZwGyctMWE-7zPZmVczJw8v5dOkC4RwNl",
     "https://media.gerbeaud.net/2015/10/640/biberon-chaton.jpg"
 ]
-
+items = []
 20.times do
-    item = Item.create(title: Faker::FunnyName.name, short_description: Faker::Lorem.sentence, long_description: Faker::Lorem.sentence, price: range(10.0, 50.0), image_url: imgs[rand(0..imgs.size)])
+    items << Item.create(
+        title: Faker::FunnyName.name,
+        short_description: Faker::Lorem.sentence,
+        long_description: Faker::Lorem.sentence,
+        price: range(10.0, 50.0),
+        image_url: imgs[rand(0..imgs.size)]
+        )
 end
