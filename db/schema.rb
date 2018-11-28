@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_27_180404) do
+ActiveRecord::Schema.define(version: 2018_11_28_131933) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -42,18 +42,18 @@ ActiveRecord::Schema.define(version: 2018_11_27_180404) do
     t.string "slug"
   end
 
-  create_table "items_orders", id: false, force: :cascade do |t|
-    t.bigint "item_id", null: false
-    t.bigint "order_id", null: false
-    t.index ["item_id", "order_id"], name: "index_items_orders_on_item_id_and_order_id"
-    t.index ["order_id", "item_id"], name: "index_items_orders_on_order_id_and_item_id"
-  end
-
   create_table "orders", force: :cascade do |t|
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_orders_on_user_id"
+  end
+
+  create_table "orders_items", force: :cascade do |t|
+    t.bigint "order_id"
+    t.bigint "item_id"
+    t.index ["item_id"], name: "index_orders_items_on_item_id"
+    t.index ["order_id"], name: "index_orders_items_on_order_id"
   end
 
   create_table "users", force: :cascade do |t|
