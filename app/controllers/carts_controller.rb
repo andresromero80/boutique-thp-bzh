@@ -1,7 +1,6 @@
 class CartsController < ApplicationController
   before_action :is_signed_in?
   def show
-    # @cart_items = @cart.items
     @total = @cart.compute_total
   end
 
