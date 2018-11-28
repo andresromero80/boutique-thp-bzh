@@ -3,6 +3,7 @@ class Item < ApplicationRecord
         slug
     end
     
+    has_one_attached :picture
     has_many :orders_items
     has_and_belongs_to_many :orders, through: :orders_items
     
