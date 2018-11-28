@@ -81,5 +81,5 @@ test:
 production:
   <<: *default
   database: boutique-thp-bzh_production
-  username: boutique-thp-bzh
+  username: <%= ENV['BOUTIQUE_THP_BZH_DATABASE_USER'] %>
   password: <%= ENV['BOUTIQUE-THP-BZH_DATABASE_PASSWORD'] %>
