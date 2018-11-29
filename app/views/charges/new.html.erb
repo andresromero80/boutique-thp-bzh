@@ -1,3 +1,28 @@
+  <div id="page">
+    <aside id="colorlib-hero" class="breadcrumbs">
+      <div class="flexslider">
+        <ul class="slides">
+          <li style="background-image: url(https://img.bfmtv.com/c/1000/600/8bc/a952f51ad2093d8e12d03982b9030.jpeg);">
+            <div class="overlay">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
+                  <div class="slider-text-inner text-center">
+                    <h1>Shopping Ca(r)t</h1>
+                    <h2 class="bread"><%= link_to "Home", root_path %><span><%= link_to "Products", items_index_path %></span> <span>Shopping Cart</span></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+          </ul>
+        </aside>
+      </div>
+
+  <div class="text-center colorlib-heading">
+      <div class="container">   
+
+
 <%= form_tag charges_path do %>
   <article>
     <% if flash[:error].present? %>
@@ -17,3 +42,7 @@
           data-currency="eur"
           data-locale="auto"></script>
 <% end %>
+          
+
+    </div>
+  </div>
