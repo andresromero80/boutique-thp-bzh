@@ -24,7 +24,7 @@
             </li>
 						<!-- <li><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li> -->
             <li class="has-dropdown">
-              <%= link_to "User", users_profil_path %>
+              <%= link_to "User", customers_profil_path %>
               <ul class="dropdown">
                 <% unless user_signed_in? %>
                   <li>
@@ -38,7 +38,7 @@
                       <%= link_to "Edit", edit_user_registration_path %>
                   </li>
                   <li>
-                    <%= link_to "Profil", users_profil_path %>
+                    <%= link_to "Profil", customers_profil_path %>
                   </li>
                   <% end %>
               </ul>

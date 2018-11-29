@@ -6,7 +6,7 @@ Rails.application.routes.draw do
   post '/carts/add_to_cart', to: 'carts#add_item'
   get '/items/show', to: 'items#show'
   get '/items/index', to: 'items#index'
-  # get '/users/profil', to: 'users#profil'
+  get '/customers/profil', to: 'customers#profil'
   resources :items, param: :slug
   resources :carts, param: :slug
   resources :orders, :charges
