@@ -10,6 +10,7 @@ before_action :set_cart
 
 	def configure_permitted_parameters
 	  devise_parameter_sanitizer.permit(:sign_up, keys:[:header_image])	
+	  # devise_parameter_sanitizer.permit(:sign_up) { |u| u.permit(:firstname, :lastname, :email, :password, :password_confirmation)}
 	end
 
 	def set_cart

@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  # get 'users/edit'
+  # get 'users/profil'
   # get 'items/index'
   # get 'items/show'
   # get 'carts/show'
@@ -19,7 +21,14 @@ Rails.application.routes.draw do
   resources :carts, param: :slug
   # resources :orders, :charges
 
+
+  get 'items/index', to: 'items#index'
+  get '/items/show', to: 'items#show'
+  get '/users/profil', to: 'users#profil'
 end
+
+
+  
 
 
   

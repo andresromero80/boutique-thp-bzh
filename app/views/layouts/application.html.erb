@@ -10,9 +10,15 @@
   </head>
 
   <body>
-     <header>
+    <header>
       <%= render :partial => "layouts/navbar" %>
     </header>
     <%= yield %>
+
+  <div>
+    <footer>
+      <%= render :partial => "layouts/footer" %>
+    </footer>
+  </div>
   </body>
 </html>

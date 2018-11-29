@@ -11,13 +11,12 @@
           <ul>
             <li class="active"><%= link_to "Home", root_path %></li>
             <li class="has-dropdown">
-              <a><%= link_to "Shop", items_path %></a>
+              <%= link_to "Shop", items_path %>
               <ul class="dropdown">
                 <li><a href="cart.html">Shipping Cart</a></li>
                 <li><a href="checkout.html">Checkout</a></li>
               </ul>
             </li>
-            <li><a href="contact.html">Contact</a></li>
             <li>
               <% if current_user %>
                 <%= link_to "My Cart", cart_path(@cart) %>
@@ -25,7 +24,7 @@
             </li>
             <!-- <li><a href="cart.html"><i class="icon-shopping-cart"></i> Cart [0]</a></li> -->
             <li class="has-dropdown">
-              <a href="profil.html">User</a>
+              <%= link_to "User", users_profil_path %>
               <ul class="dropdown">
                 <% unless user_signed_in? %>
                   <li>
@@ -36,7 +35,10 @@
                   </li>
                   <% else %>
                   <li>
-                    <%= link_to "Profil", edit_user_registration_path %>
+                    <%= link_to "Profil", users_profil_path %>
+                  </li>
+                   <li>
+                    <%= link_to "Edit", edit_user_registration_path %>
                   </li>
                   <li>
                     <%= link_to "Log out", destroy_user_session_path, method: :delete %>
