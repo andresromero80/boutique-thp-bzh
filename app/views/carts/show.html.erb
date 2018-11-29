@@ -59,12 +59,9 @@
 							<span>Remove</span>
 						</div>
 					</div>
-
-						
   					<% @cart.carts_items.each do |asso| %>
     				<% item = Item.find(asso.item_id) %>
 						<div class="product-cart" id="id-item-<%= item.id %>">
-
 							<div class="one-forth">
 								<div class="product-img" style="background-image: url(<%= item.image_url %>);">
 								</div>

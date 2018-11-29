@@ -1,0 +1,92 @@
+<aside id="colorlib-hero" class="breadcrumbs">
+	<div class="flexslider">
+		<ul class="slides">
+			<li style="background-image: url(https://img.bfmtv.com/c/1000/600/8bc/a952f51ad2093d8e12d03982b9030.jpeg);">
+			   	<div class="overlay"></div>
+			   	<div class="container-fluid">
+			   		<div class="row">
+				   		<div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
+				   			<div class="slider-text-inner text-center">
+				   				<h1>Checkout</h1>
+				   				<h2 class="bread"><span><a href="index.html">Home</a></span> <span><a href="cart.html">Shopping Cart</a></span> <span>Checkout</span></h2>
+				   			</div>
+				   		</div>
+				   	</div>
+			   	</div>
+			</li>
+		</ul>
+	</div>
+</aside>
+
+		<div class="colorlib-shop">
+			<div class="container">
+				<div class="row row-pb-md">
+					<div class="col-md-10 col-md-offset-1">
+						<div class="process-wrap">
+							<div class="process text-center active">
+								<p><span>01</span></p>
+								<h3>Shopping Cart</h3>
+							</div>
+							<div class="process text-center active">
+								<p><span>02</span></p>
+								<h3>Checkout</h3>
+							</div>
+							<div class="process text-center">
+								<p><span>03</span></p>
+								<h3>Order Complete</h3>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-7">
+						<%= form_for(@contact, url: {action: "create"}, html: { method: :post, class: "colorlib-form" }) do |f| %>
+							<h2>Billing Details</h2>
+            	<div class="row">
+               	<div class="form-group">
+									<div class="col-md-6">
+								    <%= f.label :firstname, "First Name" %><br />
+								    <%= f.text_field :firstname, autocomplete: "First Name" %>
+								  </div>
+
+								  <div class="col-md-6">
+								    <%= f.label :lastname, "Last Name" %><br />
+								    <%= f.text_field :lastname, autocomplete: "Last Name" %>
+								  </div>
+
+								  <div class="col-md-6">
+								    <%= f.label :lastname, "Last Name" %><br />
+								    <%= f.text_field :lastname, autocomplete: "Last Name" %>
+								  </div>
+								</div>
+
+								<div class="col-md-12">
+									<div class="form-group">
+										<label for="address">Address</label>
+											<%= f.label :address, "Address" %><br />
+									    <%= f.text_field :address, autocomplete: "Address" %>
+		               </div>
+		             </div>
+
+		             <div class="col-md-12">
+		             	<div class="form-group">
+										<%= f.label :country, "Country" %><br />
+								    <%= f.text_field :country, autocomplete: "Country" %>
+	               	</div>
+
+									<div class="col-md-6">
+										<%= f.label :postal_code, "Postal Code" %><br />
+								    <%= f.text_field :postal_code, autocomplete: "Postal Code" %>
+									</div>
+								</div>
+
+								<div class="col-md-6">
+										<%= f.label :number, "Phone Number" %><br />
+								    <%= f.text_field :number, autocomplete: "Phone Number", class: "form-control" %>
+								</div>
+								<%= f.submit "Passer la commande" %>
+								<% end%>
+							</div>
+						</div>
+					</form>
+					</div>
