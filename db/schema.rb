@@ -44,12 +44,12 @@ ActiveRecord::Schema.define(version: 2018_11_28_134003) do
     t.index ["user_id"], name: "index_carts_on_user_id"
   end
 
-  create_table "carts_items", id: false, force: :cascade do |t|
-    t.bigint "item_id", null: false
-    t.bigint "cart_id", null: false
+  create_table "carts_items", force: :cascade do |t|
+    t.bigint "cart_id"
+    t.bigint "item_id"
     t.integer "quantity"
-    t.index ["cart_id", "item_id"], name: "index_carts_items_on_cart_id_and_item_id"
-    t.index ["item_id", "cart_id"], name: "index_carts_items_on_item_id_and_cart_id"
+    t.index ["cart_id"], name: "index_carts_items_on_cart_id"
+    t.index ["item_id"], name: "index_carts_items_on_item_id"
   end
 
   create_table "items", force: :cascade do |t|
@@ -61,13 +61,6 @@ ActiveRecord::Schema.define(version: 2018_11_28_134003) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.string "slug"
-  end
-
-  create_table "items_orders", id: false, force: :cascade do |t|
-    t.bigint "item_id", null: false
-    t.bigint "order_id", null: false
-    t.index ["item_id", "order_id"], name: "index_items_orders_on_item_id_and_order_id"
-    t.index ["order_id", "item_id"], name: "index_items_orders_on_order_id_and_item_id"
   end
 
   create_table "orders", force: :cascade do |t|
