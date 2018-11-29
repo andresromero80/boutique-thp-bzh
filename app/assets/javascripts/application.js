@@ -14,3 +14,15 @@
 //= require activestorage
 //= require turbolinks
 //= require_tree .
+
+//= require jquery.min.js
+//= require jquery.easing.1.3.js
+//= require jquery.waypoints.min.js
+//= require jquery.flexslider-min.js
+//= require jquery.stellar.min.js
+//= require jquery.magnific-popup.min.js
+//= require bootstrap.min.js
+//= require bootstrap-datepicker.js
+//= require owl.carousel.min.js
+//= require magnific-popup-options.js
+//= require main.js 
