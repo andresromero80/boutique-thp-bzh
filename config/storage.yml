@@ -12,8 +12,8 @@ amazon:
   service: S3
   access_key_id: <%= Rails.application.credentials.dig(:aws, :access_key_id) %>
   secret_access_key: <%= Rails.application.credentials.dig(:aws, :secret_access_key) %>
-  region: eu-west-3
-  bucket: "upload-files-thp.com"
+  region: us-east-2 #or 2?
+  bucket: "gossip-pro-devise" 
 
 # Remember not to checkin your GCS keyfile to a repository
 # google:

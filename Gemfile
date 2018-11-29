@@ -38,12 +38,10 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'bootstrap'
 # gem 'bootstrap-sass'
-gem 'devise'
-gem 'faker'
+
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
-gem 'stripe'
-gem 'aws-sdk-s3'
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
@@ -67,6 +65,7 @@ group :test do
   gem 'chromedriver-helper'
 end
 
-# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
-gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'stripe'
+gem 'devise'
+gem 'aws-sdk-s3'
+gem 'faker'
