@@ -1,0 +1,13 @@
+<div>
+  <% @cart.carts_items.each do |asso| %>
+    <% item = Item.find(asso.item_id) %>
+    <div id="id-item-<%= item.id %>">
+      <p> <%= item.title %> </p>
+      <p> <%= item.short_description %> </p>
+      <p> Price : <%= item.price %>  Quantity : <%= asso.quantity %> </p>
+      <p> <a href="/carts/remove_item/<%= asso.id %>/<%= asso.item_id %>" data-remote=true> Remove from Cart </a> </p>
+    </div>
+  <% end %>
+  <span id="total"> Total : <%= @total %>  </span>
+</div>
+<button id="confirm_order" type="submit"> <a href="/orders"> Pass command </a> </button>
