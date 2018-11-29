@@ -26,10 +26,3 @@
 //= require owl.carousel.min.js
 //= require magnific-popup-options.js
 //= require main.js 
- 
-  
-
-
-
-
-
