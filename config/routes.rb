@@ -1,11 +1,13 @@
 Rails.application.routes.draw do
 
+  get 'user/profil'
   root to: "home#index"
   devise_for :users
   get '/carts/add_item/:id', to: 'carts#add_item'
   get '/carts/remove_item/:id_r/:id_o', to: 'carts#remove_item'
   post '/carts/add_to_cart', to: 'carts#add_item'
   post '/items/add_to_cart', to: 'items#add_to_cart'
+  get '/user/profil', to: 'user#profil'
   resources :items, param: :slug
   resources :carts, param: :slug
   resources :orders, :charges
