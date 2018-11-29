@@ -11,3 +11,4 @@ Rails.application.routes.draw do
   resources :carts, param: :slug
   resources :orders, :charges
 # Cart.joins(:items).where(items: { id: 4})
+end
