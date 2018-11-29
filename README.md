@@ -1,24 +1,15 @@
-# README
+# The Hacking Project
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Week 9 - Day 4 : Projet : Rendre le projet en équipe
+https://boutique-thp-bzh.herokuapp.com
 
-Things you may want to cover:
+## Team : THP Rennes - Mafia-BZH - HOP
 
-* Ruby version
+## Group - Programming :
 
-* System dependencies
+* Malo de Kervasdoué
+* Jessica Languille
+* Alexandre Peccard 
+* Andres Romero
 
-* Configuration
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
