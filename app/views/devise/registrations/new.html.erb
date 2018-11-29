@@ -1,35 +1,63 @@
-<h2>Sign up</h2>
+    <aside id="colorlib-hero" class="breadcrumbs">
+      <div class="flexslider">
+        <ul class="slides">
+          <li style="background-image: url(http://2.bp.blogspot.com/-DUCSzRO9tHs/VPjCi2yH3zI/AAAAAAAAdBc/JfETr3DSYD8/s1600/couverture-facebook-incroyable-chaton_06.jpg);">
+            <div class="overlay"></div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
+                  <div class="slider-text-inner text-center">
+                    <h1>Inscription</h1>
+                    <h2 class="bread"><%= link_to "Home", root_path %></h2>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+    </aside>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3 col-sm-12 col-xs-12 slider-text">
+        <div class="slider-text-inner text-center">
+          <div class="testimony text-center">
+              <h2>Sign Up</h2>
+            <div class="item">
 
-  <div class="field">
-  <%= f.label :avatar %><br />
-  <%= f.file_field :avatar %>
-</div>
+              <%= form_for(resource, as: resource_name, url: registration_path(resource_name), class: "colorlib-form") do |f| %>
+              <%= devise_error_messages! %>
+                <br>
+              <div class="field">
+                <%= f.label :email %><br />
+                <%= f.email_field :email, autofocus: true, class: "form-control", autocomplete: "email", placeholder: "Adresse Email" %>
+              </div>
+                <hr>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
-  </div>
+              <div class="field">
+                <%= f.label :password %>
+                <% if @minimum_password_length %>
+                <em>(<%= @minimum_password_length %> characters minimum)</em>
+                <% end %><br />
+                <%= f.password_field :password, class: "form-control", autocomplete: "new-password" %>
+              </div>
+                <hr>
 
+              <div class="field">
+                <%= f.label :password_confirmation %><br />
+                <%= f.password_field :password_confirmation, class: "form-control", autocomplete: "new-password" %>
+              </div>
 
-  <div class="field">
-    <%= f.label :password %>
-    <% if @minimum_password_length %>
-    <em>(<%= @minimum_password_length %> characters minimum)</em>
-    <% end %><br />
-    <%= f.password_field :password, autocomplete: "new-password" %>
-  </div>
-
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
-  </div>
-
-  <div class="actions">
-    <%= f.submit "Sign up" %>
-  </div>
-<% end %>
+                <hr>
+              <div class="actions">
+                <%= f.submit "Sign up", class: "btn btn-primary" %>
+              </div>
+            <% end %>
+              <hr>
 
 <%= render "devise/shared/links" %>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
